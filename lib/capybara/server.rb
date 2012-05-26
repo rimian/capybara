@@ -39,7 +39,7 @@ module Capybara
       if path =~ /^http/
         path
       else
-        (Capybara.app_host || "http://#{host}:#{port}") + path.to_s
+        (Capybara.app_host || "http://#{host}") + ":#{port}" + path.to_s
       end
     end
 
